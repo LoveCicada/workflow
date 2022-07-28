@@ -1,0 +1,86 @@
+stages:
+  - check
+  - analysis
+  - build
+  - test
+
+#每次PUSH分支触发文件编码格式检查
+check:file_code:
+  stage: check
+  tags:
+    - Python3
+  only:
+    - branches
+  except:
+    - tags
+    - schedules
+    - master
+  script:
+    - python3 ./tools/encode_conv.py ./src/app
+    - python3 ./tools/encode_conv.py ./src/modules
+
+#每次PUSH分支触发代码格式检查
+check:clang-format:
+  stage: analysis
+  tags:
+    - Windows
+  only:
+    - branches
+  except:
+    - tags
+    - schedules
+    - master
+  allow_failure: true #允许执行错误
+  script:
+    - python3 ./tools/format_code.py ./src/app
+    - python3 ./tools/format_code.py ./src/modules
+    - git diff --exit-code ./src
+
+#每次PUSH分支触发编译检查
+build:windows:vs2019:
+  stage: build
+  tags:
+    - VS2019
+  only:
+    refs:
+      - branches
+  except:
+    - tags
+    - schedules
+    - master
+  script:
+    - echo "Build project with VS2019."
+    - mkdir build 
+    - cd build
+    - cmake ../ -A x64 -G "Visual Studio 16 2019"
+    - cmake --build . --target ALL_BUILD --config Debug --parallel 16
+  artifacts:
+    public: false
+    when: on_success
+    expire_in: 2 hrs
+    paths:
+      - ./build/output/Debug/test*.exe
+      - ./build/output/Debug/*.dll
+
+test:windows:
+  stage: test
+  needs: ["build:windows:vs2019"]
+  tags:
+    - Windows
+  only:
+    refs:
+      - branches
+  except:
+    - tags
+    - schedules
+    - master
+  allow_failure: true
+  script:
+    - echo "Unit testing ..."
+    - python3 ./tools/unit_test.py ./build/output/Debug
+  artifacts:
+    public: false
+    when: always
+    expire_in: 1 week
+    reports:
+      junit: ./build/output/Debug/test*.xml
