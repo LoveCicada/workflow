@@ -8,7 +8,9 @@ workflow soft develop study
 
 [浅谈简单工作流设计——责任链模式配合策略与命令模式的实现](https://blog.csdn.net/iteye_353/article/details/82242836?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-82242836-blog-98068358.pc_relevant_multi_platform_whitelistv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-82242836-blog-98068358.pc_relevant_multi_platform_whitelistv3&utm_relevant_index=2)
 
+[Flowable工作流引擎概要](https://zhuanlan.zhihu.com/p/417014073)
 
+[Camunda入门（一） - 选型及核心概念](https://blog.csdn.net/luo15242208310/article/details/122648136)
 
 ***
 
