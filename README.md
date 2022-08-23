@@ -12,5 +12,34 @@ workflow soft develop study
 
 [Camunda入门（一） - 选型及核心概念](https://blog.csdn.net/luo15242208310/article/details/122648136)
 
+[Windows Workflow Foundation之旅（六）——框架组成、工作流创作模式](https://www.cnblogs.com/wayne-ivan/archive/2007/09/06/883699.html)
+
+
+
 ***
+
+### 无人机机载数据分析应用工作流设计
+1. 定义任务Task设计
+   Task参考数据库增删改查设计
+2. 工作流各流程中交互以Task进行交互
+   解析Task，然后按照各自的算子进行处理
+3. 构建抽象算子对象设计
+   实例化各类型算子实现，例如C++，Java，Python，Mysql。(策略模式)
+
+4. 如何实现工作流中各子流程数据处理完毕，通知下一阶段流程？
+   各算子执行是执行对应脚本，或者运行某进程程序。
+   跨进程通知如何优雅设计？
+   
+5. 各算子脚本或者可执行程序的命名与算子名称相同。
+   
+6. 使用QProcess启动外部程序，并监听程序完成状态，及杀死外部程序
+   
+7. 
+
+
+
+
+
+
+
 
