@@ -1,3 +1,4 @@
+
 # workflow
 workflow soft develop study
 
@@ -38,8 +39,42 @@ workflow soft develop study
 
 
 
+***
 
+- doc
 
+[从零实现一个 http 服务器](https://zhuanlan.zhihu.com/p/411152110)
 
+[一文彻底弄懂REST API](https://zhuanlan.zhihu.com/p/536437382)
 
+[开源项目推荐：C++ Web/Http Server/Rest开发框架（请重点关注Oat++和搜狗workflow）](https://developer.aliyun.com/article/804257)
+
+[wfrest是基于当前最火最简洁好用的c++异步网络库workflow](https://www.zhihu.com/question/332778359?utm_source=com.evernote)
+
+[wfrest: C++ Web Framework REST API](https://github.com/wfrest/wfrest/blob/main/README_cn.md)
+
+[wfrest: C++ Web Framework REST API](https://gitee.com/MonkeyKingX/wfrest)
+
+***
+
+- sougou workflow编译
+```bash
+sudo apt-get install libssl-dev
+
+mkdir build
+cd build
+cmake ..
+make 
+sudo make install
+
+```
+
+- wfrest编译
+```bash
+mkdir build
+cd build
+cmake ..
+make 
+sudo make install
+```
 
