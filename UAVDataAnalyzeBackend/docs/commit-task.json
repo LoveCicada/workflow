@@ -1,0 +1,26 @@
+
+{
+
+    "taskList": [
+        {
+            "index": 0,
+            "algorithmName": "taskQuery",
+            "subFlowName": "taskQuery00",
+            "algorithAddress": "url00",
+            "input": "input00",
+            "output": "output00",
+            "codeLanguage": "python",
+            "cmd":"python test.py"
+        },
+        {
+            "index": 1,
+            "algorithmName": "taskQuery",
+            "subFlowName": "taskQuery01",
+            "algorithAddress": "url01",
+            "input": "input01",
+            "output": "output01",
+            "codeLanguage": "sql",
+            "cmd":"mysql"
+        }
+    ]
+}

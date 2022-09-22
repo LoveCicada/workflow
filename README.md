@@ -55,6 +55,16 @@ workflow soft develop study
 
 [wfrest: C++ Web Framework REST API](https://gitee.com/MonkeyKingX/wfrest)
 
+[详解Linux监控重要进程的实现方法](https://cloud.tencent.com/developer/article/1722336)
+
+[c++调用python](https://blog.csdn.net/lc_MVP/article/details/121430286?spm=1001.2101.3001.6650.11&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EESLANDING%7Edefault-11-121430286-blog-55194714.pc_relevant_multi_platform_whitelistv4eslandingctr2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EESLANDING%7Edefault-11-121430286-blog-55194714.pc_relevant_multi_platform_whitelistv4eslandingctr2&utm_relevant_index=14)
+
+[【Linux】进程控制（wait 和 waitpid）的理解和使用](https://zhuanlan.zhihu.com/p/484949219)
+
+[linux下基于boost/process库实现多进程管理，基于c++开发](https://copyfuture.com/blogs-details/202208312028571728)
+
+[cpp-subprocess](https://github.com/tsaarni/cpp-subprocess)
+
 ***
 
 - sougou workflow编译
